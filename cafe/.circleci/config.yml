@@ -1,0 +1,16 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/python:3.6
+    steps:
+      - checkout
+      - run: |
+          python3 -m venv venv
+          source ./venv/bin/activate
+          pip install django==1.11.7
+          cd cafe/apps
+          # マイグレーションの実行
+          python manage.py migrate
+          # Djangoのテストの実行
+          python manage.py test

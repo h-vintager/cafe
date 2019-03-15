@@ -43,5 +43,3 @@ class TeaSearchFormTest(unittest.TestCase):
         form = TeaSearchForm(params)
         self.assertEqual(form.is_valid(), True, form.errors.as_text())
 from django.test import TestCase
-
-# Create your tests here.

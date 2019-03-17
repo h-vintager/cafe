@@ -1,8 +1,5 @@
 from django.db import models
 
-# Create your models here.
-from django.db import models
-
 TEA_KINDS = (
     ("english", "英国紅茶"),
     ("chinese", "中国茶"),
